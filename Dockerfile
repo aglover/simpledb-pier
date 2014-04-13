@@ -3,6 +3,7 @@ MAINTAINER Andy Glover "ajglover@gmail.com"
 
 RUN apt-get update -y
 
+# see https://github.com/stephenh/fakesdb -- issue 13 https://github.com/stephenh/fakesdb/issues/13
 RUN wget http://repo.joist.ws/com/bizo/fakesdb-standalone_2.9.1/2.6.1/fakesdb-standalone_2.9.1-2.6.1.jar -O fakesdb-standalone.jar
 RUN mkdir local-sdb
 RUN mv fakesdb-standalone.jar local-sdb/. && cd local-sdb && jar xf fakesdb-standalone.jar
